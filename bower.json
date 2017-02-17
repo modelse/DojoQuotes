@@ -1,0 +1,8 @@
+{
+  "name": "quotes",
+  "private": true,
+  "dependencies": {
+    "skeleton" : "2.0.4"
+    
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quotes Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Here are the awesome quotes!</h1>
+        <div>
+            @foreach(var quote in ViewBag.Quotes){
+                <p>@quote.content</p>
+                <p>-@quote.name @quote.created_at</p>
+            }
+           
+        </div>
+        <form action="addQuote" method="post">
+            <button type="submit">Add Quote</button>
+        </form>
+    
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+@model quotes.Models.Quotes
+<html lang="en">
+    <head>
+        <title>Quoting Dojo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/site.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1>Welcome to Quoting Dojo</h1>
+    <form asp-controller="Home" asp-action="create" method="post">
+        <div id="name">
+            <label asp-for="name"></label>
+            <input asp-for="name"/>
+            <span asp-validation-for="name"></span>
+        </div>
+
+        <div id="quote">
+            <label asp-for="content"></label>
+            <input asp-for="content"/>
+            <span asp-validation-for="content"></span> 
+        </div>
+
+        <button type="submit">Add my quote!</button>
+    </form>
+
+    <form action="skip" method="post">
+        <button type="submit">Skip to quotes!</button>
+    </form>
+
+    </body>
+</html>
